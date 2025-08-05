@@ -23,7 +23,7 @@ h1{
 }
 
 .prezentare{
-    height:300px;
+    height:250px;
     display:flex;
     flex-direction: row;
     justify-content: center;
@@ -33,8 +33,8 @@ h1{
 }
 
 .poze{
-    height:100%;
-    width:50%;
+    height:20%px;
+    width:20%px;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -42,10 +42,16 @@ h1{
     position: relative;
 }
 
+
+
+@media (max-width: 600px) {
+  .container {
+    border-radius:100%;
+  }
+}
+
 #profilephoto{
     display: block;
-    height: 500px;
-    width:300px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 0 70px 50px rgba(0,71,241, 0.7);
@@ -55,19 +61,19 @@ h1{
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 120px;     /* Adjust size as needed */
+  font-size: 120px;
   color: #1e90ff;
   font-weight: bold;
-  z-index: 2;           /* Higher than image */
-  pointer-events: none; /* So clicks go to image */
-  user-select: none;    /* Prevent selection */
+  z-index: 2;
+  pointer-events: none;
+  user-select: none;
 }
 
 
 .bracket.top {
   color:rgb(248, 76, 33);
   top: -30px;
-  margin-left: -150px;
+  margin-left: -140px;
   animation: float 2.5s ease-in-out infinite;
 }
 
@@ -86,14 +92,112 @@ h1{
   50%      { transform: translateX(-50%) translateY(-18px) }
 }
 
+@media (max-width: 800px) {
+  .prezentare {
+    flex-direction: column; /* Switches to column on small screens */
+    justify-content: center;
+    align-items:center;
+    height:340px;
+  }
+
+  .nume {
+    margin:1%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align:start;
+    width:50%;
+}
+
+  .poze{
+    height:150px;
+    width:150px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+  .bracket {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 70px;
+  color: #1e90ff;
+  font-weight: bold;
+  z-index: 2;
+  pointer-events: none;
+  user-select: none;
+}
+
+  .bracket.top {
+  color:rgb(248, 76, 33);
+  top: -30px;
+  margin-left: -70px;
+  animation: float 2.5s ease-in-out infinite;
+}
+
+/* Bottom bracket */
+  .bracket.bottom {
+    color: rgb(248, 76, 33);
+    bottom: -30px;
+    margin-left: 70px;
+    transform: translateX(-50%);
+    animation: float 2.5s ease-in-out infinite;
+  animation-delay: 1.25s; /* Half the duration for opposite phase */
+} 
+
+
+}
+
+.skills-section{
+  background-color: #001C36;
+}
+
 .skills{
     background-color: rgb(0, 28, 54);
     color:rgb(255, 183, 183);
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap:5%;
-    
+    gap:5%;   
+}
+
+.projects{
+  background-color: white;
+  height:300px;
+  color:black;
+}
+
+.project{
+  border:2px solid #2196f3;
+  border-radius:10px;
+  height:120%;
+  display:flex;
+  flex-direction: row;
+  justify-content:center;
+  gap:10%;
+}
+
+.project-text{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  gap:10%;
+  margin-left:2%;
+
+}
+
+.project-image{
+  padding:2%;
+  display:flex;
+  align-items: center;
+}
+
+#project-image{
+  border-radius:10px;
+
 }
 
 .divider{

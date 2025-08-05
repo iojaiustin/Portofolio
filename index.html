@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css">
   <title>Your Name | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js"></script>
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans">
 
@@ -24,18 +25,18 @@
   <!-- Hero Section -->
   <section class="prezentare">
     <div class="nume">
-      <h2 class="nume2 text-4xl font-bold mb-4">Hi, We are<pre> </pre><p class="highlight">  Nume</p></h2>
-      <p class="text-lg">Two web developers with a passion for clean design and efficient code.</p>
+      <h2 class="nume2 text-4xl font-bold mb-4">Hi, We are Nume</h2>
     </div>
 
     <div class="poze">
       <span class="bracket top">&lt;</span>
-      <img src="profilephoto.png" id="profilephoto">
+      <img class="w-70 h-70 md:w-72 md:h-[400px] mx-auto" src="profilephoto2.png" id="profilephoto">
       <span class="bracket bottom">&gt;</span>
     </div>
   </section>
 
-  <section class="skills py-5 bg-gray">
+  <section class="skills-section py-5">
+    <div class="skills">
     <h3>HTML</h3>
     <h3>CSS</h3>
     <h3>JavaScript</h3>
@@ -45,6 +46,7 @@
     <h3>React</h3>
     <h3>C/C++</h3>
     <h3>Python</h3>
+    </div>
   </section>
 
   <!-- About Section -->
@@ -69,19 +71,35 @@
       </p>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-16 bg-gray-100">
+
+  <section id="projects" class="projects">
     <div class="max-w-6xl mx-auto px-4">
       <h3 class="text-3xl font-semibold text-center mb-10">Projects</h3>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Project Card -->
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h4 class="text-xl font-semibold mb-2">Project Title</h4>
-          <p class="text-gray-700 mb-4">Plm aici punem niste proiecte de pe github daca nu ai, pun eu cateva</p>
-          <a href="#" class="text-blue-600 hover:underline">View Project →</a>
+
+        <div class="project">
+          <div class="project-text">
+            <h4 class="text-xl font-semibold mb-2">Project Title</h4>
+            <p>Borat scurta descriere la website plm</p>
+            <a href="#" class="text-blue-600 hover:underline">View Project →</a>
+          </div>
+          <div class="project-image">
+            <img id="project-image" src="website-examples-feature.png">
         </div>
-        <!-- Duplicate for more projects -->
       </div>
+
+      <div class="project">
+          <div class="project-text">
+            <h4 class="text-xl font-semibold mb-2">Project Title</h4>
+            <p>Borat scurta descriere la website plm</p>
+            <a href="#" class="text-blue-600 hover:underline">View Project →</a>
+          </div>
+          <div class="project-image">
+            <img id="project-image" src="website-examples-feature.png">
+        </div>
+      </div>
+
+      
     </div>
   </section>
 
