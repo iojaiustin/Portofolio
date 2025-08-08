@@ -8,12 +8,18 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="script.js"></script>
 </head>
-<body class="bg-gray-100 text-gray-900 font-sans">
+<body class="text-gray-900 font-sans">
+  <div class="background-blur">
+      <img src="background6.jpg">
+    </div>
 
+  <div class="background-blur">
+      <img src="background6.jpg">
+    </div>
   <!-- Header -->
   <header class="shadow-md sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold">Nume Firma</h1>
+      <h1 class="text-xl font-bold">Forge Net.</h1>
       <nav class="space-x-6">
         <a href="#about" class="hover:text-blue-500">About</a>
         <a href="#projects" class="hover:text-blue-500">Projects</a>
@@ -35,7 +41,8 @@
     </div>
   </section>
 
-  <section class="skills-section py-5">
+  <section class="skills-section">
+    <div class="divider2"></div>
     <div class="skills">
     <h3>HTML</h3>
     <h3>CSS</h3>
@@ -47,6 +54,7 @@
     <h3>C/C++</h3>
     <h3>Python</h3>
     </div>
+    <div class="divider2"></div>
   </section>
 
   <!-- About Section -->
@@ -69,13 +77,15 @@
         We study Electronics, Telecommunications and Computer Science at the <br>
         Technical University of Cluj-Napoca, where we sharpen our skills for every technology services we have to offer.
       </p>
+      <div class="divider2" id="projects-bottom-divider"></div>
   </section>
 
 
   <section id="projects" class="projects">
     <div class="max-w-6xl mx-auto px-4">
-      <h3 class="text-3xl font-semibold text-center mb-10">Projects</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <h3 class="text-3xl font-semibold text-center mb-10 py-4">Projects</h3>
+      
+      <div class="pojects-slider">
 
         <div class="project">
           <div class="project-text">
@@ -99,11 +109,21 @@
         </div>
       </div>
 
-      
+      <div class="project">
+          <div class="project-text">
+            <h4 class="text-xl font-semibold mb-2">Project Title</h4>
+            <p>Borat scurta descriere la website plm</p>
+            <a href="#" class="text-blue-600 hover:underline">View Project →</a>
+          </div>
+          <div class="project-image">
+            <img id="project-image" src="website-examples-feature.png">
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="work">
+    <div class="divider2"></div>
     <h3 class="text-3xl font-semibold mb-4" style="color:white; margin-top: 50px;">What we do</h3>
 
     <div class="development">
@@ -481,8 +501,7 @@ We combine reliability with the latest technology to ensure seamless and powerfu
     </div>
 
     <div id="fast-text">
-    <p>We deliver fast and respond quickly, ensuring your project moves forward without delays.
-We stay agile and communicative, so you’re never left waiting for answers or results.</p>
+    <p>We deliver fast and respond quickly, ensuring your project moves forward without delays.</p>
 
     </div>
     </div>
