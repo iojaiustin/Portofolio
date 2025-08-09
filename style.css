@@ -15,7 +15,7 @@ h1{
     position: fixed;
     top: -20px;
     left: -40px;
-    width: 120vw;    /* increase width */
+    width: 120vw;
     height: 120vh;   
     object-fit: fit;
     z-index: -1;
@@ -24,38 +24,87 @@ h1{
 
 
 .nume {
+    z-index: 4;
     margin:1%;
+    margin-left:30%;
     display:flex;
     flex-direction: column;
     justify-content: center;
     text-align:start;
-    width:50%;
+    width:80%;
 }
 
-.nume2{
-    display: flex;
-    margin-left:15%;
-    flex-direction: row;
+#big-title{
+  font-size:30px;
+  font-weight: 800;
+}
+
+@media (max-width:800px){
+.nume {
+  z-index: 4;
+  margin:1%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width:200px;
+  overflow:visible;
+}
+
+#big-title{
+  font-size:20px;
+  font-weight: 800;
+}
+
 }
 
 .prezentare{
     height:250px;
+    width:100%;
     display:flex;
     flex-direction: row;
+    margin-right:20%;
     justify-content: center;
     color:white;
-
     overflow: hidden;
 }
 
 .poze{
-    height:20%px;
-    width:20%px;
+    height:50%;
+    width:50%;
+    top:25%;
+    margin-right:30%;
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position: relative;
+}
+
+@media (max-width:800px){
+  .prezentare{
+    height:50px;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    margin-right:20%;
+    justify-content: center;
+    color:white;
+    overflow: hidden;
+}
+
+.poze{
+    height:10%;
+    width:50%;
+    top:5%;
+    margin-right:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
 }
 
 
@@ -94,14 +143,14 @@ h1{
   animation: float 2.5s ease-in-out infinite;
 }
 
-/* Bottom bracket */
+
 .bracket.bottom {
   color: rgb(248, 76, 33);
   bottom: -30px;
   margin-left: 140px;
   transform: translateX(-50%);
   animation: float 2.5s ease-in-out infinite;
-  animation-delay: 1.25s; /* Half the duration for opposite phase */
+  animation-delay: 1.25s;
 }
 
 @keyframes float {
@@ -150,7 +199,7 @@ h1{
 
   .bracket.top {
   color:rgb(248, 76, 33);
-  top: -30px;
+  top: -10px;
   margin-left: -70px;
   animation: float 2.5s ease-in-out infinite;
 }
@@ -158,7 +207,7 @@ h1{
 /* Bottom bracket */
   .bracket.bottom {
     color: rgb(248, 76, 33);
-    bottom: -30px;
+    bottom: 0px;
     margin-left: 70px;
     transform: translateX(-50%);
     animation: float 2.5s ease-in-out infinite;
@@ -205,7 +254,7 @@ h1{
 }
 
 .projects{
-  height:400px;
+  height:500px;
   color:white;
   display: flex;
   gap:20%;
@@ -235,6 +284,7 @@ h1{
 }
 
 .project-image{
+  width: 50%;
   padding:2%;
   display:flex;
   align-items: center;
@@ -256,18 +306,19 @@ h1{
 
     .projects {
       overflow:scroll;
-    height: 11%;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap:-2px;
+    /*gap:-2px;*/
+    gap:20px;
   }
 
   .project {
       border-radius:10px;
       height:50%;
-      width:70%;
+      width:100%;
       margin:2%;
       display:flex;
       flex-direction: row;
@@ -323,6 +374,28 @@ h1{
     gap:15%;
 }
 
+@media (max-width:800px) {
+  .about{
+    height:650px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    color:white;
+    /*background-color: rgb(0, 20, 39);*/
+    position:relative;
+    overflow:hidden;
+    margin-left:5%;
+    margin-right:5%;
+}
+
+#about{
+    display:flex;
+    flex-direction:column;
+    gap:15%;
+}
+}
+
 .work{
 
     height:1100px;
@@ -342,6 +415,13 @@ h1{
     height:-100px;
     width:500px;
     margin-left:5%;
+}
+
+@media (max-width:800px){
+  .development{
+    width: 400px;
+    gap:10px;
+  }
 }
 
 
@@ -378,6 +458,18 @@ h1{
     overflow:scroll;
 }
 
+@media (max-width:800px){
+  .slider-track{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    gap: 20%;
+    margin-left: 0;
+    margin-right: 0;
+    overflow:scroll;
+}
+}
+
 .highlight{
     color:rgb(248, 76, 33);
 }
@@ -409,7 +501,7 @@ h1{
   .loader {
       position: absolute;
       top: 25%;
-      left: 35%;
+      left: 45%;
       z-index: 10;
       width: 160px;
       height: 100px;
@@ -529,6 +621,7 @@ h1{
 @media (max-width: 800px) {
   .sustainability{
     gap:10%;
+    width:400px;
   }
 }
 
@@ -656,8 +749,7 @@ h1{
     position:relative;
     overflow:visible;
     display:flex;
-
-    gap:5%;
+    gap:2%;
   }
 }
 
@@ -671,12 +763,12 @@ h1{
 .rocket {
   position: absolute;
   width: 60px;
-  left: calc(50% - 200px);
+  left: 80px;
 }
 
 @media (max-width: 800px) {
   .rocket {
-    left: calc(40%-100px);
+    left: calc(40%-150px);
   }
 }
 
